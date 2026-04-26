@@ -42,8 +42,6 @@ if st.button("Analyze Candidate"):
         
         st.subheader("💡 Smart Recommendations")
 
-        st.subheader("💡 Smart Recommendations")
-
         for skill in gap["missing_skills"]:
             s = skill.lower()
 
