@@ -1,86 +1,99 @@
 # AI Skill Assessment Agent
 
-## About the Project
+##  Live Demo
 
-This project is a simple web-based tool that compares a Job Description (JD) with a candidate’s resume. It helps in identifying skill gaps and gives suggestions on how to improve.
-
-The main idea is that resumes often show what someone claims to know, but not how well they match a specific job. This tool tries to bridge that gap.
+👉 https://ai-skill-agent-4lsk5vug66zmntrfgz4fry.streamlit.app/
 
 ---
 
-## What It Does
+## Overview
+
+This project is a web-based tool that compares a Job Description (JD) with a candidate’s resume to evaluate job readiness.
+
+It identifies skill gaps, measures how well the candidate matches the role, and provides a structured learning plan along with practical recommendations for improvement.
+
+---
+
+## Key Features
 
 * Extracts skills from both Job Description and Resume
-* Compares them to find matching and missing skills
-* Gives a score based on how well the candidate fits
-* Generates a learning plan to improve missing skills
-* Suggests what to focus on next
-
----
-
-## Features
-
-* Works for different roles (Data, HR, Business, etc.)
-* Skill-based comparison system
-* Simple scoring method
-* Personalized learning roadmap
-* Basic recommendations for improvement
+* Identifies matched and missing skills
+* Calculates a candidate score based on skill alignment
+* Generates a structured learning plan tailored to missing skills
+* Provides recommendations based on the type of skills (technical, tools, soft skills)
+* Works across multiple domains such as data roles, business roles, and HR
 
 ---
 
 ## How It Works
 
-1. User pastes Job Description and Resume
-2. The system extracts skills from both
-3. It compares them and finds gaps
-4. Based on gaps, it generates:
+1. The user inputs a Job Description and a Resume
+2. The system extracts relevant skills using text parsing
+3. It compares both sets of skills to identify gaps
+4. Based on the analysis, it generates:
 
-   * Score
-   * Learning plan
-   * Suggestions
-
----
-
-## Tech Used
-
-* Python
-* Streamlit
+   * Skill gap breakdown
+   * Candidate score
+   * Learning roadmap
+   * Recommendations
 
 ---
 
-## How to Run
+## Scoring Logic
 
-1. Install Python
+The candidate score is calculated using:
 
-2. Install Streamlit:
-   pip install streamlit
+Score = (Matched Skills / Total Required Skills) × 100
 
-3. Run the app:
-   streamlit run app.py
+Based on the score:
 
-4. Open in browser:
-   http://localhost:8501
+* Above 75% → Strong Candidate
+* 50% – 75% → Moderate Candidate
+* Below 50% → Needs Improvement
+
+---
+
+## Learning Plan Logic
+
+The learning plan is generated based on missing skills and adapts depending on the skill type:
+
+* Technical skills → concept learning, coding practice, and projects
+* Tools → dashboard creation and practical use cases
+* Soft skills → communication practice, mock interviews, and real-world application
+
+---
+
+## System Design (Architecture)
+
+User Input (JD + Resume)
+→ Skill Extraction
+→ Skill Gap Analysis
+→ Scoring Module
+→ Learning Plan Generation
+→ Recommendation Engine
+→ Streamlit Interface
 
 ---
 
 ## Example
 
-Input:
-JD: Python, SQL, Excel
+**Input:**
+JD: Python, SQL, Communication
 Resume: Python, Excel
 
-Output:
-Matched: Python, Excel
-Missing: SQL
-Score: ~66%
+**Output:**
+Matched Skills: Python
+Missing Skills: SQL, Communication
+Score: ~33%
+Learning Plan: Structured roadmap for improvement
 
 ---
 
 ## Notes
 
-* This is a rule-based system (not using external AI APIs)
-* Can be extended with LLMs in future
-* Designed to be simple, understandable, and easy to improve
+* This project uses a rule-based approach for reliability and clarity
+* It supports free-text job descriptions instead of fixed formats
+* It can be extended with AI/LLM models for deeper semantic understanding
 
 ---
 
