@@ -78,13 +78,18 @@ User Input (JD + Resume)
 ## Example
 
 **Input:**
-*JD: Python, SQL, Communication
-*Resume: Python, Excel
+       JD: Python, SQL, Communication
+
+Resume: Python, Excel
+
 
 **Output:**
-Matched Skills: Python
+         Matched Skills: Python
+
 Missing Skills: SQL, Communication
+
 Score: ~33%
+
 Learning Plan: Structured roadmap for improvement
 
 ---
@@ -100,5 +105,7 @@ Learning Plan: Structured roadmap for improvement
 ## Author
 
 Annesha Khamrui
+
 Master’s in Operational Research
+
 University of Delhi
