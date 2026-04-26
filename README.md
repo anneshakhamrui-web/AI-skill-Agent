@@ -78,8 +78,8 @@ User Input (JD + Resume)
 ## Example
 
 **Input:**
-JD: Python, SQL, Communication
-Resume: Python, Excel
+*JD: Python, SQL, Communication
+*Resume: Python, Excel
 
 **Output:**
 Matched Skills: Python
